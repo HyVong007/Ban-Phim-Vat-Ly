@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tam.banphimvatly" >
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="Ban Phim Vat Ly">
+		
+		<receiver
+			android:label="Layout ban phim vat ly"
+			android:name="com.tam.banphimvatly.MyInputDeviceReceiver">
+			
+			<intent-filter>
+				<action android:name="android.hardware.input.action.QUERY_KEYBOARD_LAYOUTS" />
+			</intent-filter>
+			
+			<meta-data android:name="android.hardware.input.metadata.KEYBOARD_LAYOUTS" android:resource="@xml/all_keyboard_layouts" />
+		</receiver>
+		
+    </application>
+
+</manifest>
